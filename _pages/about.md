@@ -7,4 +7,4 @@ redirect_from:
   - /about.html
 ---
 
-![Illustration home page](/images/bioinformatics.png)
+![Illustration home page](/athosmoraes.github.io/images/bioinformatics.png)
