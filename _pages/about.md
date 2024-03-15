@@ -7,7 +7,8 @@ redirect_from:
   - /about.html
 ---
 
-![Illustration of combining vision and language modalities](/images/bioinformatics.png){: .align-right width="300px"}
+![Illustration home page](../images/bioinformatics.png){: .align-right width="300px"}
+
 I'm a final year master's student in bioinformatics at the University of Porto.
 
 My research interests are in bridging vision and language modalities.
