@@ -16,8 +16,8 @@ main:
   #   url: /year-archive/
     
   - title: "CV"
-    url: /files/Athos_CV_2023_ENG.pdf
-    #url: /cv/
+    #url: /files/Athos_CV_2023_ENG.pdf
+    url: /cv/
     
   # - title: "Guide"
   #   url: /markdown/
