@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-![Illustration home page](/athosmoraes.github.io/images/bioinformatics.png){: .align-right width="300px"}
+![Illustration home page](/athosmoraes/images/bioinformatics.png){: .align-right width="300px"}
 
 🧬 I am currently in my final year as a Master's student in Bioinformatics at the University of Porto.
 
