@@ -24,7 +24,7 @@ author:
   avatar           : "profile.jpeg"
   name             : "Athos Moraes"
   pronouns         : # example: "she/her"  
-  bio              : "Computational Biology Multimodal Learning"
+  bio              : "Data Science, Computational Biology, Multimodal Learning"
   location         : "Porto, Portugal"
   employer         : "University of Porto"
   uri              : # URL
@@ -47,7 +47,7 @@ author:
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
   # Social media
-  bluesky          : "bsky.app" # Replace this with you Bluesky username
+  bluesky          : #"bsky.app" # Replace this with you Bluesky username
   facebook         : # Username
   flickr           : # Username
   foursquare       : # Username
