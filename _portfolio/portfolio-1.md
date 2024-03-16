@@ -1,6 +1,6 @@
 ---
-title: "Automated Product Registration System using a Multimodal Approach"
-excerpt: "Short description of portfolio item number 1<br/><img src='/images/portfolio/product_registration.webp'>"
+title: "Multimodal Approach for Automated Product Registration"
+excerpt: "In this project, I designed and implemented a system capable of autonomously categorizing supermarket products within a structured and meaningful taxonomy, relying solely on their textual descriptions.<br/><img src='/athosmoraes/images/portfolio/product_registration.webp'>"
 collection: portfolio
 ---
 
