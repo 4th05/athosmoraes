@@ -32,7 +32,7 @@ The system comprises three primary components, each serving a specific function 
 - **Approach**: Uses the enriched product descriptions and attributes to perform similarity searches against an existing database, assigning new products to the appropriate category or prompting for the creation of a new category if no match is found.
 
 ### Project Workflow
-<img src="athosmoraes/images/portfolio/autocad_workflow.png" alt="Project Workflow" style="width: 500px;">
+<img src="/athosmoraes/images/portfolio/autocad_workflow.png" alt="Project Workflow" style="width: 500px;">
 
 ### Implementation and Deployment
 
