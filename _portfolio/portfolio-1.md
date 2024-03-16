@@ -1,6 +1,6 @@
 ---
 title: "Automated Product Registration System using a Multimodal Approach"
-excerpt: "Short description of portfolio item number 1<br/><img src='athosmoraes/images/portfolio/product_registration.webp'>"
+excerpt: "Short description of portfolio item number 1<br/><img src='/images/portfolio/product_registration.webp'>"
 collection: portfolio
 ---
 
