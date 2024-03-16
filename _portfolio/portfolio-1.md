@@ -1,6 +1,6 @@
 ---
 title: "Multimodal Approach for Automated Product Registration"
-excerpt: "In this project, I designed and implemented a system capable of autonomously categorizing supermarket products within a structured and meaningful taxonomy, relying solely on their textual descriptions.<br/><img src='/athosmoraes/images/portfolio/product_registration.webp'>"
+excerpt: "In this project, I designed and implemented a system capable of autonomously categorizing supermarket products within a structured and meaningful taxonomy, relying solely on their textual descriptions.<br/><img src='/athosmoraes/images/portfolio/product_registration.webp' style='width: 300px;>"
 collection: portfolio
 ---
 
@@ -31,6 +31,9 @@ The system comprises three primary components, each serving a specific function 
 - **Function**: Finds the closest match within a pre-defined taxonomy for new products.
 - **Approach**: Uses the enriched product descriptions and attributes to perform similarity searches against an existing database, assigning new products to the appropriate category or prompting for the creation of a new category if no match is found.
 
+### Project Workflow
+<img src="athosmoraes/images/portfolio/autocad_workflow.png" alt="Project Workflow" style="width: 300px;">
+
 ### Implementation and Deployment
 
 - **Deployment Method**: The system is modularized and deployed via APIs, encapsulated within Docker containers.
@@ -39,3 +42,4 @@ The system comprises three primary components, each serving a specific function 
 ### Outcome and Implications
 
 The implementation of this automated system is designed to improve productivity within retail environments. By leveraging advanced machine learning models and natural language processing techniques, it streamlines the product registration and classification process. This not only facilitates operational efficiency but also ensures accuracy in the categorization of products, demonstrating the potential of integrating text and image processing technologies in retail settings.
+
