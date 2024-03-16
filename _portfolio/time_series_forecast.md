@@ -1,6 +1,6 @@
 ---
-title: "Multimodal Approach for Automated Product Registration"
-excerpt: "In this project, I designed and implemented a system capable of autonomously categorizing supermarket products within a structured and meaningful taxonomy, relying solely on their textual descriptions (2023).<br/><img src='/athosmoraes/images/portfolio/product_registration/product_registration.webp' style='width: 300px;'>"
+title: "Time Series Classification and Forecasting"
+excerpt: "In this project, I constructed a system dedicated to the classification of time series into distinct typologies, which is subsequently followed by demand forecasting. This system employs specific algorithms designed to each type of time series typology (2022).<br/><img src='/athosmoraes/images/portfolio/time_series_forecasting/time_series.webp' style='width: 300px;'>"
 collection: portfolio
 ---
 
