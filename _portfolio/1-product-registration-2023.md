@@ -1,6 +1,6 @@
 ---
 title: "Multimodal Approach for Automated Product Registration [2023]"
-excerpt: "In this project, I designed and implemented a system capable of autonomously categorizing supermarket products within a structured and meaningful taxonomy, relying solely on their textual descriptions.<br/><img src='/athosmoraes/images/portfolio/product_registration/product_registration.webp' style='width: 300px;'>"
+excerpt: "In this project, I designed and implemented a system capable of autonomously categorizing supermarket products within a structured and meaningful taxonomy, relying solely on their textual descriptions, bar code and scrapped images. For that, I utilized technologies like LLMs, GANs, and contrastive learning.<br/><img src='/athosmoraes/images/portfolio/product_registration/product_registration.webp' style='width: 300px;'>"
 collection: portfolio
 ---
 
