@@ -1,14 +1,12 @@
 ---
-title: "Time Series Classification using Graph Theory"
+title: "Demand Forecasting Through Time Series Classification using Graph Theory"
 excerpt: "In this project, I constructed a system dedicated to the classification of time series into distinct typologies using graph theory. Subsequently, the pipeline is followed by demand forecasting, employing specific prediction algorithms designed to each type of time series typology (2022).<br/><img src='/athosmoraes/images/portfolio/time_series_forecasting/time_series.webp' style='width: 300px;'>"
 collection: portfolio
 ---
 
-### Project Description
+# Project Description
 
-# Demand Forecasting Through Time Series Classification
-
-In 2022, while working for Yhub (refer to my CV for details), I designed and developed a system to automate demand forecasting of supermarket.
+In 2022, while working for Yhub (refer to my CV for details), I designed and developed a system to automate demand forecasting of supermarket products.
 
 In the context of products demand forecasting, it was identified that the diverse nature of time series data necessitated a different approach to selecting forecasting models. Since these products can have inherent differences in time series behavior, which could range from being sparse to stationary, or exhibit recurrent patterns, not all forecasting algorithms are recomended. To address this challenge, I developed a methodology using graph theory to classify time series into distinct categories, each suited for a specific forecasting model. This process entailed the following steps
 
@@ -19,7 +17,7 @@ Utilizing the concept of Visibility Graphs (VG) and Horizontal Visibility Graphs
 
 ![Workflow](/athosmoraes/images/portfolio/time_series_forecasting/HVG.png)
 
-These illustrative images were extracted from [Silva et al, 2021]([URL](https://wires.onlinelibrary.wiley.com/doi/abs/10.1002/widm.1404)).
+These illustrative images were extracted from <a href="[URL](https://wires.onlinelibrary.wiley.com/doi/abs/10.1002/widm.1404)">Silva et al, 2021</a>.
 
 ### Function
 Transform time series data into graphs using the concept of Visibility Graphs.
