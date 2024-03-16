@@ -39,7 +39,3 @@ The system comprises three primary components, each serving a specific function 
 - **Deployment Method**: The system is modularized and deployed via APIs, encapsulated within Docker containers.
 - **Hosting Platform**: AWS Fargate, providing the necessary compute resources in a serverless environment.
 
-## Outcome and Implications
-
-The implementation of this automated system is designed to improve productivity within retail environments. By leveraging advanced machine learning models and natural language processing techniques, it streamlines the product registration and classification process. This not only facilitates operational efficiency but also ensures accuracy in the categorization of products, demonstrating the potential of integrating text and image processing technologies in retail settings.
-
