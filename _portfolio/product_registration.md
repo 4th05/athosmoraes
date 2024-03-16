@@ -12,6 +12,8 @@ This document outlines a system developed to automate the product registration p
 
 The system comprises three primary components, each serving a specific function in the process of product registration and classification:
 
+![Workflow](/athosmoraes/images/portfolio/product_registration/autocad_workflow.png)
+
 #### 1. Search Block
 
 - **Function**: Enhances product descriptions using text embeddings.
@@ -30,11 +32,6 @@ The system comprises three primary components, each serving a specific function 
 
 - **Function**: Finds the closest match within a pre-defined taxonomy for new products.
 - **Approach**: Uses the enriched product descriptions and attributes to perform similarity searches against an existing database, assigning new products to the appropriate category or prompting for the creation of a new category if no match is found.
-
-### Project Workflow
-<img src="/athosmoraes/images/portfolio/product_registration/autocad_workflow.png" alt="Project Workflow" style="width: 500px;">
-
-![Workflow](/athosmoraes/images/portfolio/product_registration/autocad_workflow.png)
 
 ### Implementation and Deployment
 
