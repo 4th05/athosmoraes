@@ -1,6 +1,6 @@
 ---
 title: "Multimodal Approach for Automated Product Registration"
-excerpt: "In this project, I designed and implemented a system capable of autonomously categorizing supermarket products within a structured and meaningful taxonomy, relying solely on their textual descriptions.<br/><img src='/athosmoraes/images/portfolio/product_registration.webp' style='width: 300px;'>"
+excerpt: "In this project, I designed and implemented a system capable of autonomously categorizing supermarket products within a structured and meaningful taxonomy, relying solely on their textual descriptions.<br/><img src='/athosmoraes/images/portfolio/product_registration/product_registration.webp' style='width: 300px;'>"
 collection: portfolio
 ---
 
@@ -32,7 +32,9 @@ The system comprises three primary components, each serving a specific function 
 - **Approach**: Uses the enriched product descriptions and attributes to perform similarity searches against an existing database, assigning new products to the appropriate category or prompting for the creation of a new category if no match is found.
 
 ### Project Workflow
-<img src="/athosmoraes/images/portfolio/autocad_workflow.png" alt="Project Workflow" style="width: 500px;">
+<img src="/athosmoraes/images/portfolio/product_registration/autocad_workflow.png" alt="Project Workflow" style="width: 500px;">
+
+![Workflow](/athosmoraes/images/portfolio/product_registration/autocad_workflow.png)
 
 ### Implementation and Deployment
 
