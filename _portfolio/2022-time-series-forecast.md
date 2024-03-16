@@ -15,9 +15,9 @@ In the context of products demand forecasting, it was identified that the divers
 ## 1. Conversion of Time Series to Graphs
 Utilizing the concept of Visibility Graphs (VG) and Horizontal Visibility Graphs (HVG), time series data were transformed into graphs. This transformation allowed for the extraction of topological features from the graphs, such as clique number, node distribution, and connectivity. These features served as representative characteristics of the underlying time series.
 
-![Workflow](/athosmoraes/images/portfolio/time_series_forecast/VG.png)
+![Workflow](/athosmoraes/images/portfolio/time_series_forecasting/VG.png)
 
-![Workflow](/athosmoraes/images/portfolio/time_series_forecast/HVG.png)
+![Workflow](/athosmoraes/images/portfolio/time_series_forecasting/HVG.png)
 
 These illustrative images were extracted from [Silva et al, 2021]([URL](https://wires.onlinelibrary.wiley.com/doi/abs/10.1002/widm.1404)).
 
