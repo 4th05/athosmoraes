@@ -1,0 +1,13 @@
+---
+title: "Cigarette smoking drives accelerated aging across human tissues"
+collection: publications
+permalink: /publications/2024-03-21-cigarette-smoking
+excerpt: 'In this study, we investigated how cigarette smoking affects aging at the molecular level across multiple human tissues. We analyzed gene expression, alternative splicing, DNA methylation, and histological changes, revealing that smoking alters tissue structure and triggers systemic inflammation. We found that smoking accelerates aging, with many smoking-related molecular changes—like upregulating inflammatory genes and causing DNA hypomethylation—mirroring those of aging. Notably, smoking also leads to hypermethylation in regions targeted by the Polycomb repressive complex, a known marker of aging. These smoking-induced changes persist over time, highlighting how smoking accelerates aging by disrupting tissue homeostasis across the body.'
+date: 2024-03-01
+venue: 'Machine Learning, July 2024, Springer'
+paperurl: 'https://link.springer.com/10.1007/s10994-024-06588-x'
+citation: 'Ramirez, J. M., Ribeiro, R., Soldatkina, O., Moraes, A., Garcia-Perez, R., Ferreira, P. G., & Mele, M. (2024). "Cigarette smoking drives accelerated aging across human tissues." bioRxiv, 2024-03.'
+
+---
+
+Tobacco smoke is the main cause of preventable mortality worldwide. Smoking increases the risk of developing many diseases and has been proposed as an aging accelerator. Yet, the molecular mechanisms driving smoking-related health decline and aging acceleration in most tissues remain unexplored. Here, we characterize gene expression, alternative splicing, DNA methylation and histological alterations induced by cigarette smoking across human tissues. We show that smoking impacts tissue architecture and triggers systemic inflammation. We find that in many tissues, the effects of smoking significantly overlap those of aging in the same direction. Specifically, both age and smoking upregulate inflammatory genes and drive hypomethylation at enhancers. In addition, we observe widespread smoking-driven hypermethylation at target regions of the Polycomb repressive complex, which is a well-known aging effect. Smoking-induced epigenetic changes overlap causal aging CpGs, suggesting that these methylation changes may directly mediate aging acceleration observed in smokers. Finally, we find that smoking effects that are shared with aging are more persistent over time. Overall, our multi-tissue and multi-omic analysis of the effects of cigarette smoking provides an extensive characterization of the impact of tobacco smoke across tissues and unravels the molecular mechanisms driving smoking-induced tissue homeostasis decline and aging acceleration.
