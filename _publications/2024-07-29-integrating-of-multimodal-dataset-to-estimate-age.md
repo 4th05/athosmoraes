@@ -1,7 +1,7 @@
 ---
 title: "Integration of multi-modal datasets to estimate human aging"
 collection: publications
-permalink: /publication/2023-10-08-predicting-age-from-human-lung-tissue
+permalink: /publications/2024-07-29-integrating-of-multimodal-dataset-to-estimate-age
 excerpt: 'In this work, we explored how different types of biological data can help predict age more accurately. Using data from the GTEx project, we focused on lung and ovary tissues to estimate age based on DNA methylation, gene expression, and histological images. Building on our previous research, we achieved promising results with histological images by using the Hierarchical Image Pyramid Transformers (HIPT) architecture as a feature extractor, significantly boosting prediction accuracy. We also found that combining different omics data improved age prediction across multiple regression metrics. This study demonstrates how deep learning can be applied to better understand aging by integrating various biological data.'
 date: 2024-07-29
 venue: 'Machine Learning, July 2024, Springer'
