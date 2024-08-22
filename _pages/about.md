@@ -9,11 +9,11 @@ redirect_from:
 
 ![Illustration home page](/athosmoraes/images/bioinformatics.png){: .align-right width="300px"}
 
-🧬 I have recently completed my Master's in Bioinformatics at the University of Porto, and I am now seeking a PhD position.
+🧬 I've recently completed my Master's in Bioinformatics at the University of Porto, and I'm now looking for a PhD position.
 
 🩻 My research interests focus on working with multi-modalities, whether merging vision and text or integrating multi-omics data in the biology field. My main motivation is to generate valuable insights that can improve healthcare systems and personalized diagnosis.
 
-📚 My Master's thesis focused on generating automatic reports from histopathological images by integrating Computer Vision and Natural Language Processing. I am now working on a publication to present the main results of this work.
+📚 My Master's thesis focused on generating automatic reports from histopathological images by integrating Computer Vision and Natural Language Processing. I'm now working on a publication to present the main results of this work.
 
 👨🏻‍💻 Since completing my bachelor's degree, I've been working as a Data Scientist and Machine Learning Engineer for various companies across multiple sectors.
 
