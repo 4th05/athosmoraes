@@ -22,10 +22,10 @@ repository               : "academicpages/academicpages.github.io"
 author:
   # Biographic information
   avatar           : "profile.jpeg"
-  name             : "Athos Moraes"
-  pronouns         : # example: "she/her"  
+  name             : "Athos Moraes (🇧🇷)"
+  pronouns         : # example: "she/her"
   bio              : "Data Science, Computational Biology, Multimodal Learning"
-  location         : "Porto, Portugal"
+  location         : "Porto, Portugal (🇵🇹)"
   employer         : "University of Porto"
   uri              : # URL
   email            : "athos.m.moraes@gmail.com" 
