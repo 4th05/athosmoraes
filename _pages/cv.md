@@ -58,4 +58,4 @@ redirect_from:
 * Practical Time Series Analysis, SUNY on Coursera.
 
 ## Download
-⏬ [Get my CV here!](/athosmoraes/files/Athos_CV_2023_ENG.pdf "Get my CV here!")
+⏬ [Get my CV here!](/athosmoraes/files/Athos_CV_2024_ENG.pdf "Get my CV here!")
