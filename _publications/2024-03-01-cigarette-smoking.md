@@ -5,7 +5,7 @@ permalink: /publications/2024-03-21-cigarette-smoking
 excerpt: 'In this study, we investigated how cigarette smoking affects aging at the molecular level across multiple human tissues. We analyzed gene expression, alternative splicing, DNA methylation, and histological changes, revealing that smoking alters tissue structure and triggers systemic inflammation. We found that smoking accelerates aging, with many smoking-related molecular changes—like upregulating inflammatory genes and causing DNA hypomethylation—mirroring those of aging. Notably, smoking also leads to hypermethylation in regions targeted by the Polycomb repressive complex, a known marker of aging. These smoking-induced changes persist over time, highlighting how smoking accelerates aging by disrupting tissue homeostasis across the body.'
 date: 2024-03-01
 venue: 'Machine Learning, July 2024, Springer'
-paperurl: 'https://link.springer.com/10.1007/s10994-024-06588-x'
+paperurl: 'https://www.biorxiv.org/content/10.1101/2024.03.14.585016.abstract'
 citation: 'Ramirez, J. M., Ribeiro, R., Soldatkina, O., Moraes, A., Garcia-Perez, R., Ferreira, P. G., & Mele, M. (2024). "Cigarette smoking drives accelerated aging across human tissues." bioRxiv, 2024-03.'
 
 ---
