@@ -1,20 +1,40 @@
 ---
-title: "Automatic Report Generation from Histopathological Images"
+title: "Automatic Report Generation from Histopathological Images [2024]"
+excerpt: "In this work, I attempted to build a system for the automatic generation of pathology reports from Whole Slide Images (WSIs). To this end, I constructed a solution divided into 3 main stages: Inference (INF), Aggregation (AGG), and Generation (GEN). In the initial stage, a set of independent models (neural networks) generates isolated predictions from the same WSI. Subsequently, these predictions are sent to the AGG stage where they are aggregated to form a caption with a concise diagnosis of the image. Finally, in GEN, 3 instances of Large Language Models (which I refer to as agents) operate on the caption from the previous stage with the aim of enriching its content with information about the microscopic and macroscopic characteristics of the sample, as well as other relevant information about the given pathological condition. Lastly, the final agent is responsible for critiquing and organizing all this content in the form of a pathology report. Click on the title of the work for more details about this process.<br/><img src='/athosmoraes/images/masters/mthesis_workflow.png' style='width: 300px;'>"
 collection: masters
-permalink: /masters/2024-08-23-automatic-report-generation
-excerpt: 'This study develops age prediction models using transcriptomics, methylation, and histological images from 793 lung tissue samples, facing challenges like varied data modalities and high feature dimensionality. Utilizing gradient boosting and convolutional neural networks, and applying data-centric techniques for imbalanced data, the models predict biological age with a median absolute error of 4 years. This highlights the feasibility and challenges of integrating multi-modal datasets for age prediction.'
-date: 2024-07-24
-venue: 'University of Porto'
-paperurl: 'https://link.springer.com/chapter/10.1007/978-3-031-45275-8_43'
-citation: 'Moraes, A., "Automatic Report Generation from Histopathological Images." <i>International Conference on Discovery Science</i>. Springer.'
-
 ---
 
-For over a decade, Deep Learning (DL) has been successfully applied in histopathology, addressing challenges such as tumor detection, cellular segmentation, and biomarker quan- tification, among others. Following recent advancements, Foundation Models (FM) based on Transformer architectures have significantly gained popularity across academia, indus- try and public domains. This surge has led to unprecedented growth in the DL field, with new articles and ideas introducing fresh perspectives to longstanding challenges in Com- puter Vision (CV) and Natural Language Processing (NLP). As a result, interdisciplinary areas like Computational Pathology (CPATH) and Clinical NLP have seen significant ad- vancements, particularly through Multimodal Deep Learning applications such as image captioning, visual question-answering (Q&A) and cross-modal retrieval (CMR).
-<br>
-Despite these advancements, many potential interconnections between strategies in these applications remain unexplored. Techniques such as Prompt Engineering (PE) and Retrieval-Augmented Generation (RAG), which are known to enhance responses in Large Language Models (LLMs), have not yet been fully integrated with CPATH algorithms into common systems. Furthermore, working with FMs entails significant computational demands during both training and inference phases. This high resource requirement com- plicates experimentation and evaluation of new algorithms, often necessitating extensive use of cloud-based GPUs. Additionally, the inherent challenges in handling gigapixel Whole Slide Images (WSIs) typically require the adoption of resizing and segmentation strategies, approaches that inevitably lead to the loss of crucial local and global information from the inherent structural arrangement of the tissues.
-<br>
-In an effort to overcome these challenges, our research intends to bridge the gap be- tween CPATH and Clinical NLP by leveraging recent innovations in both fields to build a unified solution that integrates both domains. For that, we have developed an auto- matic pathology report generation system for WSIs guided by three main premises: first, to develop methodologies that can be replicated on systems with limited computational resources; second, to ensure the solution is easily maintainable and subject to future im- provements; and third, to enhance accessibility for end users, thereby facilitating practical applications in both clinical and educational environments.
-<br>
-Focused on lung tissue, our system workflow operates in three main stages: Data Inference (INF), Aggregation (AGG), and Generation (GEN). In the first stage, the system predicts demographic data such as age and smoker status, and utilizes cross-modal retrieval to gather diagnosis information from similar cases. Then, in AGG, we generate a concise caption containing all the infomarion from the previous modules. Finally, in the GEN stage, the system incorporates all this information into a LLM enhanced with PE and RAG to generate a histopathology report enriched with aditional information from academic literature. Moreover, we have integrated our system into a user-friendly graphical interface, making it accessible to non-specialists in the computational field. This design facilitates the practical evaluation of our solution, allowing users to easily interact with and test the system’s capabilities, ultimately enabling them to apply it in their own contexts.
-The results we obtained, while not yet suitable for deployment in real clinical settings, demonstrate the practical feasibility of utilizing the aforementioned technologies in envi- ronments constrained by limited computational resources in order to test and generate valuable solutions for the histopathology field.
+# Project Description
+
+In 2023, while working for Yhub (refer to my CV for details), I designed and developed a system to automate the registration of supermarket products with minimal human supervision. The system classifies products into an existing taxonomy of categories and subcategories, aiming to reduce manual labor through the application of machine learning, computer vision, and natural language processing technologies. In the following sections, I will explain its main functionalities and the most relevant technologies I used to achieve the final result.
+
+## Workflow
+![Workflow](/athosmoraes/images/portfolio/product_registration/autocad_workflow.png)
+
+## System Architecture
+
+The system comprises three primary components, each serving a specific function in the process of product registration and classification:
+
+### 1. Search Block
+
+- **Function**: Enhances product descriptions using text embeddings.
+- **Technologies Used**: 
+  - Text embeddings from OpenAI and BERT.
+  - Large Language Models (LLM) including GPT-4 and Llama2 for processing and enhancing product descriptions.
+
+### 2. Vision Block
+
+- **Function**: Selects the most representative image for each product and infers product attributes.
+- **Technologies Used**:
+  - CLIP model, fine-tuned with a proprietary database for correlating product images with descriptions.
+  - GPT-4 Vision for inferring product attributes such as brand and manufacturer.
+
+### 3. Similarity Search Block
+
+- **Function**: Finds the closest match within a pre-defined taxonomy for new products.
+- **Approach**: Uses the enriched product descriptions and attributes to perform similarity searches against an existing database, assigning new products to the appropriate category or prompting for the creation of a new category if no match is found.
+
+## Implementation and Deployment
+
+- **Deployment Method**: The system is modularized and deployed via APIs, encapsulated within Docker containers.
+- **Hosting Platform**: AWS Fargate, providing the necessary compute resources in a serverless environment.
