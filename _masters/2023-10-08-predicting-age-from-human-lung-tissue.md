@@ -1,0 +1,13 @@
+---
+title: "Predicting Age from Human Lung Tissue Through Multi-modal Data Integration"
+collection: masters
+permalink: /masters/2023-10-08-predicting-age-from-human-lung-tissue
+excerpt: 'This study develops age prediction models using transcriptomics, methylation, and histological images from 793 lung tissue samples, facing challenges like varied data modalities and high feature dimensionality. Utilizing gradient boosting and convolutional neural networks, and applying data-centric techniques for imbalanced data, the models predict biological age with a median absolute error of 4 years. This highlights the feasibility and challenges of integrating multi-modal datasets for age prediction.'
+date: 2023-10-08
+venue: 'International Conference on Discovery Science, 2023, Springer'
+paperurl: 'https://link.springer.com/chapter/10.1007/978-3-031-45275-8_43'
+citation: 'Moraes, A., Moreno, M., Ribeiro, R., Ferreira, P.G. (2023). "Predicting Age from Human Lung Tissue Through Multi-modal Data Integration." <i>International Conference on Discovery Science</i>. Springer.'
+
+---
+
+The accurate prediction of biological age can bring important benefits in promoting therapeutic and behavioural strategies for healthy aging. We propose the development of age prediction models using multi-modal datasets, including transcriptomics, methylation and histological images from lung tissue samples of 793 human donors. From a technical point of view this is a challenging problem since not all donors are covered by the same data modalities and the datasets have a very high feature dimensionality with a relatively smaller number of samples. To fairly compare performance across different data types, we’ve created a test set including donors represented in each modality. Given the unique characteristics of the data distribution, we developed gradient boosting tree and convolutional neural network models for each dataset. The performance of the models can be affected by several covariates, including smoking history, and, most importantly, by a skewed distribution of age. Data-centric approaches, including feature engineering, feature selection, data stratification and resampling, proved fundamental in building models that were optimally adapted for each data modality, resulting in significant improvements in model performance for imbalanced regression. The models were then applied to the test set independently, and later combined into a multi-modal ensemble through a voting strategy, predicting age with a median absolute error of 4 years. Even if prediction accuracy remains a challenge, in this work we provide insights to address the difficulties of multi-modal data integration and imbalanced data prediction.
