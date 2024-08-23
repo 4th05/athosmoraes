@@ -1,40 +1,42 @@
 ---
 title: "Automatic Report Generation from Histopathological Images [2024]"
-excerpt: "In this work, I attempted to build a system for the automatic generation of pathology reports from Whole Slide Images (WSIs). To this end, I constructed a solution divided into 3 main stages: Inference (INF), Aggregation (AGG), and Generation (GEN). In the initial stage, a set of independent models (neural networks) generates isolated predictions from the same WSI. Subsequently, these predictions are sent to the AGG stage where they are aggregated to form a caption with a concise diagnosis of the image. Finally, in GEN, 3 instances of Large Language Models (which I refer to as agents) operate on the caption from the previous stage with the aim of enriching its content with information about the microscopic and macroscopic characteristics of the sample, as well as other relevant information about the given pathological condition. Lastly, the final agent is responsible for critiquing and organizing all this content in the form of a pathology report.<br/><img src='/athosmoraes/images/masters/mthesis_workflow.png' style='width: 800px;'><br/>This figure scheme illustrates the three main stages of our solution: INF (a), AGG (b), and GEN (c). Please, click on this work's title for more details about the entire process."
+excerpt: "In this work, I attempted to build a system for the automatic generation of pathology reports from Whole Slide Images (WSIs). To this end, I constructed a solution divided into 3 main stages, namely, Inference (a), Aggregation (b), and Generation (c), as show in the figure bellow.<br/><img src='/athosmoraes/images/masters/mthesis_workflow.png' style='width: 800px;'><br/>Please, click on this work's title for more details about the entire process."
 collection: masters
 ---
 
-# Project Description
+# Abstract
 
-In 2023, while working for Yhub (refer to my CV for details), I designed and developed a system to automate the registration of supermarket products with minimal human supervision. The system classifies products into an existing taxonomy of categories and subcategories, aiming to reduce manual labor through the application of machine learning, computer vision, and natural language processing technologies. In the following sections, I will explain its main functionalities and the most relevant technologies I used to achieve the final result.
+For over a decade, Deep Learning (DL) has been successfully applied in histopathology, addressing challenges such as tumor detection, cellular segmentation, and biomarker quantification, among others. Following recent advancements, Foundation Models (FM) based on Transformer architectures have significantly gained popularity across academia, industry and public domains. This surge has led to unprecedented growth in the DL field, with new articles and ideas introducing fresh perspectives to longstanding challenges in Com- puter Vision (CV) and Natural Language Processing (NLP). As a result, interdisciplinary areas like Computational Pathology (CPATH) and Clinical NLP have seen significant ad- vancements, particularly through Multimodal Deep Learning applications such as image captioning, visual question-answering (Q&A) and cross-modal retrieval (CMR).
 
-## Workflow
-![Workflow](/athosmoraes/images/portfolio/product_registration/autocad_workflow.png)
+Despite these advancements, many potential interconnections between strategies in these applications remain unexplored. Techniques such as Prompt Engineering (PE) and Retrieval-Augmented Generation (RAG), which are known to enhance responses in Large Language Models (LLMs), have not yet been fully integrated with CPATH algorithms into common systems. Furthermore, working with FMs entails significant computational demands during both training and inference phases. This high resource requirement com- plicates experimentation and evaluation of new algorithms, often necessitating extensive use of cloud-based GPUs. Additionally, the inherent challenges in handling gigapixel Whole Slide Images (WSIs) typically require the adoption of resizing and segmentation strategies, approaches that inevitably lead to the loss of crucial local and global information from the inherent structural arrangement of the tissues.
+
+In an effort to overcome these challenges, our research intends to bridge the gap between CPATH and Clinical NLP by leveraging recent innovations in both fields to build a unified solution that integrates both domains. For that, we have developed an auto- matic pathology report generation system for WSIs guided by three main premises: first, to develop methodologies that can be replicated on systems with limited computational resources; second, to ensure the solution is easily maintainable and subject to future im- provements; and third, to enhance accessibility for end users, thereby facilitating practical applications in both clinical and educational environments.
+
+Focused on lung tissue, our system workflow operates in three main stages: Data Inference (INF), Aggregation (AGG), and Generation (GEN). In the first stage, the system predicts demographic data such as age and smoker status, and utilizes cross-modal retrieval to gather diagnosis information from similar cases. Then, in AGG, we generate a concise caption containing all the infomarion from the previous modules. Finally, in the GEN stage, the system incorporates all this information into a LLM enhanced with PE and RAG to generate a histopathology report enriched with aditional information from academic literature. Moreover, we have integrated our system into a user-friendly graphical interface, making it accessible to non-specialists in the computational field. This design facilitates the practical evaluation of our solution, allowing users to easily interact with and test the system’s capabilities, ultimately enabling them to apply it in their own contexts.
+
+The results we obtained, while not yet suitable for deployment in real clinical settings, demonstrate the practical feasibility of utilizing the aforementioned technologies in environments constrained by limited computational resources in order to test and generate valuable solutions for the histopathology field.
+
+## Data Collection and Preparation 
+Our dataset originates from The Genotype-Tissue Expression (GTEx) project, a public resource designed for researchers studying tissue and cell-specific gene expression and regulation across individuals, development stages, and species. This portal includes data from three National Institutes of Health (NIH) projects: Adult GTEx, Developmental GTEx (dGTEx), and Non-human Primate Developmental (NHP-GTEx). In this work, we exclusively utilized the Adult GTEx dataset, which contains thousands of tissue samples from various organs of post-mortem subjects.
+
+The data collection pipeline from the GTEx database, as well as its preparation for Deep Learning algorithms, involved two main steps as shown in the following figure, which were executed using Python and Bash scripts.
+
+![Workflow](/athosmoraes/images/masters/data_collection.png)
+
+Initially, Whole Slide Images (WSIs) are downloaded from the GTEx portal. Subsequently, these slides are segmented into patches of 4096x4096 pixels. Finally, feature extraction is conducted using the Hierarchical Image Pyramid Transformer (HIPT), yielding a total of three types of features. These features are then used in all subsequent steps of the report generation system.
 
 ## System Architecture
+For didactic purposes, it is appropriate to divide the implemented system into three main stages: inference (INF), aggregation (AGG), and generation (GEN) as shown in the figure bellow.
 
-The system comprises three primary components, each serving a specific function in the process of product registration and classification:
+![Architecture](/athosmoraes/images/masters/mthesis_workflow.png)
 
-### 1. Search Block
+In the first stage, INF **(a)**, there are three main modules: Diagnosis Retriever (DR), Age Prediction (AP), and Smoker Classification (SC). These modules are tasked with generating crucial information for report composition. DR retrieves the pathol- ogist’s note from the most similar cases, AP estimates the chronological age of the patient, and SC predicts the smoking status of the patient, with categories including Non-Smoker, Smoker, and Ex-Smoker.
 
-- **Function**: Enhances product descriptions using text embeddings.
-- **Technologies Used**: 
-  - Text embeddings from OpenAI and BERT.
-  - Large Language Models (LLM) including GPT-4 and Llama2 for processing and enhancing product descriptions.
+In the AGG stage **(b)**, we synthesize all information generated in the inference module to produce a caption that encompasses both clinical and demographic characteristics of the patient and their lung tissue sample.
 
-### 2. Vision Block
+Finally, the GEN stage **(c)** relies entirely on LLMs to produce the final report. At the beginning of this stage, the generated caption from the previous step is provided to a Questioner Agent tasked with generating clinically relevant questions for understanding the patient’s pathological condition. These questions are then individually addressed by another agent, the Q&E Agent, programmed to answer pathology-related questions based on a repository of references from literature that were scraped from various sources such as PubMed, BioArxiv, and selected histology books and manuals we manually collected. Ultimately, this content, along with the original caption, is delivered to a final agent, the Report Agent, charged with generating a histopathology report based on the provided caption and enriched with the content from the books.
 
-- **Function**: Selects the most representative image for each product and infers product attributes.
-- **Technologies Used**:
-  - CLIP model, fine-tuned with a proprietary database for correlating product images with descriptions.
-  - GPT-4 Vision for inferring product attributes such as brand and manufacturer.
+## User Interface
 
-### 3. Similarity Search Block
 
-- **Function**: Finds the closest match within a pre-defined taxonomy for new products.
-- **Approach**: Uses the enriched product descriptions and attributes to perform similarity searches against an existing database, assigning new products to the appropriate category or prompting for the creation of a new category if no match is found.
-
-## Implementation and Deployment
-
-- **Deployment Method**: The system is modularized and deployed via APIs, encapsulated within Docker containers.
-- **Hosting Platform**: AWS Fargate, providing the necessary compute resources in a serverless environment.
+## Conclusion
