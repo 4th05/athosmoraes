@@ -14,6 +14,9 @@ main:
         
   # - title: "Blog Posts"
   #   url: /year-archive/
+
+  - title: "Master's Thesis"
+    url: /masters/
     
   - title: "Curriculum Vitae"
     #url: /files/Athos_CV_2023_ENG.pdf
