@@ -4,8 +4,7 @@ excerpt: "In this work, I attempted to build a system for the automatic generati
 collection: masters
 ---
 
-# Abstract
-
+## Abstract
 For over a decade, Deep Learning (DL) has been successfully applied in histopathology, addressing challenges such as tumor detection, cellular segmentation, and biomarker quantification, among others. Following recent advancements, Foundation Models (FM) based on Transformer architectures have significantly gained popularity across academia, industry and public domains. This surge has led to unprecedented growth in the DL field, with new articles and ideas introducing fresh perspectives to longstanding challenges in Com- puter Vision (CV) and Natural Language Processing (NLP). As a result, interdisciplinary areas like Computational Pathology (CPATH) and Clinical NLP have seen significant ad- vancements, particularly through Multimodal Deep Learning applications such as image captioning, visual question-answering (Q&A) and cross-modal retrieval (CMR).
 
 Despite these advancements, many potential interconnections between strategies in these applications remain unexplored. Techniques such as Prompt Engineering (PE) and Retrieval-Augmented Generation (RAG), which are known to enhance responses in Large Language Models (LLMs), have not yet been fully integrated with CPATH algorithms into common systems. Furthermore, working with FMs entails significant computational demands during both training and inference phases. This high resource requirement com- plicates experimentation and evaluation of new algorithms, often necessitating extensive use of cloud-based GPUs. Additionally, the inherent challenges in handling gigapixel Whole Slide Images (WSIs) typically require the adoption of resizing and segmentation strategies, approaches that inevitably lead to the loss of crucial local and global information from the inherent structural arrangement of the tissues.
@@ -37,6 +36,16 @@ In the AGG stage **(b)**, we synthesize all information generated in the inferen
 Finally, the GEN stage **(c)** relies entirely on LLMs to produce the final report. At the beginning of this stage, the generated caption from the previous step is provided to a Questioner Agent tasked with generating clinically relevant questions for understanding the patient’s pathological condition. These questions are then individually addressed by another agent, the Q&E Agent, programmed to answer pathology-related questions based on a repository of references from literature that were scraped from various sources such as PubMed, BioArxiv, and selected histology books and manuals we manually collected. Ultimately, this content, along with the original caption, is delivered to a final agent, the Report Agent, charged with generating a histopathology report based on the provided caption and enriched with the content from the books.
 
 ## User Interface
+The application developed encapsulates the entire system previously described, from feature extraction to the final report generation.
 
+The development of this app was intended to demonstrate the potential of making our solution more accessible to individuals without specialist computing knowledge. Traditionally, end users would need familiarity with technologies such as GitHub, Python, the LangChain framework used to build the agents, and PyTorch to implement our neural network models in the AP, SC, and DR modules. By integrating our solution into an app, we have significantly lowered these technical barriers, providing a practical example of how our system can be made user-friendly for the intended audience.
 
-## Conclusion
+Next, we show pintscreens extracted from the app:
+![app_a](/athosmoraes/images/masters/app_a.png)
+![app_b](/athosmoraes/images/masters/app_b.png)
+![app_c](/athosmoraes/images/masters/app_c.png)
+
+## Outcome example
+Example of a generated report. The ground truth reference is highlighted in green. The figure bellow shows that the orignal diagnosis is mentioning Fibrosis, Hemorrhage, and Pneumonia, three pathologies that were correctly identified in the report. However, we erroneously added two unmentioned pathologies, congestion and edema.
+
+![outcome](/athosmoraes/images/masters/report.png)
