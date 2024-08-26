@@ -51,11 +51,14 @@ Example of a generated report. The ground truth reference is highlighted in gree
 ![outcome](/athosmoraes/images/masters/report.png)
 
 ## Future Work
-More than just saying what pathologies there are, we could say where they are, or at least
-show the regions with more probability of occurency of each one of them.
+Beyond simply identifying the pathologies present, we can indicate where they are located, or at least highlight the regions with the highest probability for each one.
 
-Using a Foundation Model called CONCH [here](https://github.com/mahmoodlab/CONCH), we can extract features from 256x256 patches across the entire WSI and then apply Zero-Shot classification to estimate the probability of each patch belonging to various classes of pathology. Finally, we generate heatmaps based on these probabilities for the most likely pathologies in a particular WSI, as shown in the figure below.
+Using a foundation model called CONCH ([here](https://github.com/mahmoodlab/CONCH)), we can extract features from 256x256 patches across the entire WSI and then apply zero-shot classification to estimate the probability of each patch belonging to various pathology classes. Finally, we can generate heatmaps based on these probabilities, highlighting the most likely pathologies within a given WSI, as shown in the figure below.
+
 
 ![outcome](/athosmoraes/images/masters/wsi_maps.png)
 
-Just a quick explanation: we are considering the cosine similarity between patch embeddings and text prompts containing pathology names. The heatmap represents this similarity between the image and the text prompt for a particular pathology, which we interpret as the probability of occurrence.
+With sufficient computational resources in the future, we can fine-tune their model to achieve more accurate results for our GTEx data and enhance our generated reports.
+
+Just to clarify: we are calculating the cosine similarity between patch embeddings and text prompts corresponding to pathology names. The heatmap visualizes this similarity, which we interpret as the probability of the pathology being present.
+
