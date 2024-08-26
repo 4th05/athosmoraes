@@ -49,3 +49,13 @@ Next, we show pintscreens extracted from the app:
 Example of a generated report. The ground truth reference is highlighted in green. The figure bellow shows that the orignal diagnosis is mentioning Fibrosis, Hemorrhage, and Pneumonia, three pathologies that were correctly identified in the report. However, we erroneously added two unmentioned pathologies, congestion and edema.
 
 ![outcome](/athosmoraes/images/masters/report.png)
+
+## Future Work
+More than just saying what pathologies there are, we could say where they are, or at least
+show the regions with more probability of occurency of each one of them.
+
+Using a Foundation Model called CONCH [here](https://github.com/mahmoodlab/CONCH), we can extract features from 256x256 patches across the entire WSI and then apply Zero-Shot classification to estimate the probability of each patch belonging to various classes of pathology. Finally, we generate heatmaps based on these probabilities for the most likely pathologies in a particular WSI, as shown in the figure below.
+
+![outcome](/athosmoraes/images/masters/wsi_maps.png)
+
+Just a quick explanation: we are considering the cosine similarity between patch embeddings and text prompts containing pathology names. The heatmap represents this similarity between the image and the text prompt for a particular pathology, which we interpret as the probability of occurrence.
