@@ -1,0 +1,81 @@
+/* ==========================================================================
+   Custom visual polish
+   ========================================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap");
+
+body {
+  background-color: $background-color;
+  background-image:
+    radial-gradient(1200px 600px at 10% -10%, rgba(47, 93, 106, 0.12), rgba(47, 93, 106, 0) 60%),
+    radial-gradient(900px 500px at 100% 10%, rgba(193, 134, 86, 0.12), rgba(193, 134, 86, 0) 55%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0) 35%);
+  color: $text-color;
+  letter-spacing: 0.01em;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.masthead {
+  background: rgba(246, 241, 235, 0.92);
+  border-bottom-color: rgba(31, 30, 28, 0.08);
+  box-shadow: 0 12px 30px rgba(31, 30, 28, 0.08);
+
+  @supports ((-webkit-backdrop-filter: blur(8px)) or (backdrop-filter: blur(8px))) {
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+  }
+}
+
+#main {
+  margin-top: 2.5em;
+}
+
+.page__inner-wrap,
+.archive {
+  background: #fff;
+  border: 1px solid $border-color;
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(31, 30, 28, 0.1);
+  padding: 2.25rem;
+}
+
+@media screen and (max-width: 599px) {
+  .page__inner-wrap,
+  .archive {
+    padding: 1.5rem 1.25rem;
+    border-radius: 14px;
+  }
+}
+
+.page__title {
+  line-height: 1.05;
+  font-weight: 650;
+  letter-spacing: -0.015em;
+  color: #1f2b30;
+}
+
+.page__content {
+  h2 {
+    border-bottom-color: rgba(31, 30, 28, 0.12);
+  }
+
+  a {
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 3px;
+  }
+}
+
+.archive__item-title {
+  letter-spacing: -0.01em;
+}
+
+.archive__item-teaser img,
+.page__hero-image {
+  box-shadow: 0 16px 40px rgba(31, 30, 28, 0.15);
+}
+
+.author__avatar img {
+  box-shadow: 0 10px 30px rgba(31, 30, 28, 0.15);
+  border-color: rgba(31, 30, 28, 0.12);
+}
