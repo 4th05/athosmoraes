@@ -49,24 +49,24 @@ $masthead-height            : 50px;
    Colors
    ========================================================================== */
 
-$gray                       : #7b7a76;
+$gray                       : #64748b;
 $dark-gray                  : mix(#000, $gray, 40%);
 $darker-gray                : mix(#000, $gray, 60%);
 $light-gray                 : mix(#fff, $gray, 50%);
 $lighter-gray               : mix(#fff, $gray, 90%);
 
-$body-color                 : #f6f1eb;
-$background-color           : #f6f1eb;
-$code-background-color      : #f2ede8;
+$body-color                 : #f8f9fb;
+$background-color           : #f8f9fb;
+$code-background-color      : #f1f5f9;
 $code-background-color-dark : $light-gray;
-$text-color                 : #2b2926;
-$border-color               : #e3ddd4;
+$text-color                 : #0f172a;
+$border-color               : #e2e8f0;
 
-$primary-color              : #2f5d6a;
+$primary-color              : #1d4ed8;
 $success-color              : #62c462;
 $warning-color              : #f89406;
 $danger-color               : #ee5f5b;
-$info-color                 : #2f5d6a;
+$info-color                 : #2563eb;
 
 /* brands */
 $behance-color              : #1769FF;
@@ -152,8 +152,8 @@ $susy: (
    Other
    ========================================================================== */
 
-$border-radius              : 10px;
-$box-shadow                 : 0 12px 30px rgba(31, 30, 28, 0.08);
+$border-radius              : 12px;
+$box-shadow                 : 0 12px 30px rgba(15, 23, 42, 0.08);
 $navicon-width              : 28px;
 $navicon-height             : 4px;
 $global-transition          : all 0.2s ease-in-out;
