@@ -190,7 +190,7 @@ function buildSkillGroups(entries: ExperienceEntry[]): SkillGroup[] {
 
 export const profile = {
   name: "Athos Moraes",
-  title: "Data Scientist & Bioinformatics Researcher",
+  title: "Data Scientist, AI Engineer & Bioinformatics Researcher",
   location: "Porto, Portugal",
   email: "athos.m.moraes@gmail.com",
   avatar: "images/profile.jpeg",
