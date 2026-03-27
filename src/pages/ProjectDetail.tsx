@@ -2,6 +2,8 @@ import React, { useMemo } from "react";
 import { projects } from "../data/site";
 import { Card } from "../components/Card";
 import { Tag } from "../components/Tag";
+import { DetailImageGallery } from "../components/DetailImageGallery";
+import { WarningBanner } from "../components/WarningBanner";
 
 const withBase = (path: string) => `${import.meta.env.BASE_URL}${path}`;
 
@@ -34,6 +36,15 @@ export default function ProjectDetail({ slug, homeHref }: ProjectDetailProps) {
         <span className="eyebrow">{project.year}</span>
       </div>
 
+      <WarningBanner>
+        <p>
+          Computer science moves at a breathtaking pace. Work that was cutting-edge a few years, or even months, ago
+          can already be obsolete. The projects in this portfolio are shared as snapshots of my skills, my persistence
+          in tackling open problems, and my ingenuity in finding workable solutions. They are not meant to imply I am
+          still defined by those exact stacks.
+        </p>
+      </WarningBanner>
+
       <Card className="detail-hero">
         <img src={heroImage} alt={project.title} className="detail-hero__image" />
         <div className="detail-hero__content">
@@ -62,11 +73,9 @@ export default function ProjectDetail({ slug, homeHref }: ProjectDetailProps) {
               </ul>
             ) : null}
             {section.images && section.images.length > 0 ? (
-              <div className="detail-images">
-                {section.images.map((img) => (
-                  <img key={img.src} src={withBase(img.src)} alt={img.alt} />
-                ))}
-              </div>
+              <DetailImageGallery
+                images={section.images.map((img) => ({ src: withBase(img.src), alt: img.alt }))}
+              />
             ) : null}
             {section.note ? <p className="detail-note">{section.note}</p> : null}
           </Card>

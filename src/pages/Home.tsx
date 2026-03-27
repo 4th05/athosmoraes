@@ -16,6 +16,7 @@ import { Card } from "../components/Card";
 import { Section } from "../components/Section";
 import { Tag } from "../components/Tag";
 import { skillInfoByName } from "../data/skillInfo";
+import { WarningBanner } from "../components/WarningBanner";
 
 function SocialIcon({ label }: { label: string }) {
   const common = { width: 18, height: 18, viewBox: "0 0 24 24", fill: "currentColor" };
@@ -541,19 +542,16 @@ export default function Home({ buildProjectHref, thesisHref }: HomeProps) {
       </aside>
 
       <section className="content">
+        <WarningBanner>
+          <p>
+            Computer science moves at a breathtaking pace. Work that was cutting-edge a few years, or even months, ago
+            can already be obsolete. The projects in this portfolio are shared as snapshots of my skills, my persistence
+            in tackling open problems, and my ingenuity in finding workable solutions. They are not meant to imply I am
+            still defined by those exact stacks.
+          </p>
+        </WarningBanner>
         <div className="finder-hub">
-          <Card
-            className="finder-callout"
-            role="button"
-            tabIndex={0}
-            onClick={openFinder}
-            onKeyDown={(event) => {
-              if (event.key === "Enter" || event.key === " ") {
-                event.preventDefault();
-                openFinder();
-              }
-            }}
-          >
+          <Card className="finder-callout">
             <div className="finder-callout__content">
               <div className="finder-callout__eyebrow">In a Hurry?</div>
               <h2 className="finder-callout__title">Skip the reading. Jump straight to what matters.</h2>
@@ -562,12 +560,22 @@ export default function Home({ buildProjectHref, thesisHref }: HomeProps) {
                 projects, thesis topics, or recruiter-style keywords.
               </p>
             </div>
-            <div className="finder-callout__action">
+            <button
+              className="finder-callout__action"
+              type="button"
+              onClick={() => {
+                if (isFinderOpen) {
+                  hideFinder();
+                } else {
+                  openFinder();
+                }
+              }}
+            >
               <span className="finder-callout__icon" aria-hidden="true">
                 ✦
               </span>
-              Open finder
-            </div>
+              {isFinderOpen ? "Hide finder" : "Open finder"}
+            </button>
           </Card>
           {isFinderOpen ? (
             <div ref={finderRef}>
